@@ -4,9 +4,9 @@ import { RouterOutlet } from '@angular/router';
 import {MatGridListModule} from "@angular/material/grid-list";
 
 @Component({
-  selector: 'biodiversity-form',
+  selector: 'biodiversity',
   standalone: true,
-  imports: [CommonModule, RouterOutlet, MatGridListModule],
+  imports: [CommonModule, MatGridListModule],
   templateUrl: './biodiversity.component.html',
 })
 export class BiodiversityComponent {

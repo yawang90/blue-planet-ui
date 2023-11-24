@@ -13,11 +13,4 @@ import {BiodiversityComponent} from "../biodiversity/biodiversity.component";
   styleUrl: './app.component.css'
 })
 export class AppComponent {
-  title = 'Climate school report';
-
-  constructor(private router: Router) {
-  }
-  navigateToEnergie() {
-    window.location.href = 'energie-form';
-  }
 }
