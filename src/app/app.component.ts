@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { RouterOutlet } from '@angular/router';
+import {Router, RouterOutlet} from '@angular/router';
 import {MatGridListModule} from "@angular/material/grid-list";
 
 @Component({
@@ -12,4 +12,9 @@ import {MatGridListModule} from "@angular/material/grid-list";
 })
 export class AppComponent {
   title = 'Climate school report';
+
+  constructor(private router: Router) {
+  }
+  navigateToEnergie() {
+  }
 }
