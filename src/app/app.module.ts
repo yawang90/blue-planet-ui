@@ -14,6 +14,7 @@ import {MatSelectModule} from "@angular/material/select";
 import {RouterModule, RouterOutlet} from "@angular/router";
 import {routes} from "./app.routes";
 import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
+import {MatCheckboxModule} from "@angular/material/checkbox";
 
 /* the AppModule class with the @NgModule decorator */
 @NgModule({
@@ -22,12 +23,12 @@ import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
         BiodiversityComponent,
         EnergieComponent
     ],
-    imports: [
-        RouterModule.forRoot(routes),
-        BrowserModule, BrowserAnimationsModule,
-        CommonModule, MatGridListModule,
-        FormsModule, MatCardModule, MatInputModule, ReactiveFormsModule, MatListModule, MatSelectModule, RouterOutlet
-    ],
+  imports: [
+    RouterModule.forRoot(routes),
+    BrowserModule, BrowserAnimationsModule,
+    CommonModule, MatGridListModule,
+    FormsModule, MatCardModule, MatInputModule, ReactiveFormsModule, MatListModule, MatSelectModule, RouterOutlet, MatCheckboxModule
+  ],
     providers: [],
     bootstrap: [AppComponent]
 })
