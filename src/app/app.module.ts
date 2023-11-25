@@ -23,6 +23,7 @@ import {MatIconModule} from "@angular/material/icon";
 import {MobilityComponent} from "../mobility/mobility.component";
 import {SchulinfoComponent} from "../schulinfo/schulinfo.component";
 import {MatExpansionModule} from "@angular/material/expansion";
+import {RankingComponent} from "../ranking/ranking.component";
 
 /* the AppModule class with the @NgModule decorator */
 @NgModule({
@@ -34,7 +35,8 @@ import {MatExpansionModule} from "@angular/material/expansion";
         LoginComponent,
         MobilityComponent,
         SchulinfoComponent,
-        KlimaschuleComponent
+        KlimaschuleComponent,
+        RankingComponent
     ],
     imports: [
         RouterModule.forRoot(routes),

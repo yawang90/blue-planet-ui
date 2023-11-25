@@ -7,16 +7,13 @@ import { BehaviorSubject } from 'rxjs';
 export class LoginService {
   private isAuthenticatedSubject = new BehaviorSubject<boolean>(false);
   public isAuthenticated = this.isAuthenticatedSubject.asObservable();
-
+  username: string = '';
   constructor() {}
 
   login(username: string, password: string): void {
     // Implement your authentication logic here
     // For example, you can check if the provided credentials are valid
-
-    console.log(username);
-    console.log(password);
-
+    this.username = username;
     if (username === 'test' && password === 'password') {
       this.isAuthenticatedSubject.next(true);
     } else {
@@ -28,4 +25,8 @@ export class LoginService {
     // Implement logout logic if needed
     this.isAuthenticatedSubject.next(false);
   }
+
+    getUser() {
+        return this.username;
+    }
 }

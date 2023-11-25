@@ -10,10 +10,15 @@
         <mat-grid-tile [style.background]="'lightblue'">{{'Abfall & Ressourcen'}}</mat-grid-tile>
         <mat-grid-tile [style.background]="'lightblue'">{{'Ernährung'}}</mat-grid-tile>
       </mat-grid-list>
+      <br><br>
+      <button mat-raised-button color="primary" (click)="openRanking()">Ranking</button>
+      <button mat-raised-button color="primary" style="margin-left: 5rem" (click)="openRanking()">Potentiall ermitteln</button>
     </div>
     <div class="divider" role="separator" aria-label="Divider"></div>
     <div class="right-side">
+      {{'Willkommen ' + this.loginService.getUser() + '!'}}
       <klimaschule></klimaschule>
+      <br>
       <mat-accordion class="example-headers-align" multi>
         <mat-expansion-panel>
           <mat-expansion-panel-header>
@@ -36,7 +41,6 @@
           </mat-expansion-panel-header>
         </mat-expansion-panel>
       </mat-accordion>
-
     </div>
   </div>
 </main>
