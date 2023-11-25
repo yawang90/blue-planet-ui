@@ -20,4 +20,8 @@ export class OverviewComponent {
     this.router.navigate(['/', 'biodiversity']);
   }
 
+  navigateToMobility() {
+    this.router.navigate(['/', 'mobility']);
+  }
+
 }
