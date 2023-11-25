@@ -69,20 +69,34 @@ export class SchoolService {
 export class BiodiversityEval {
     hatGarten: boolean;
     hatKompost: boolean;
+    weiteres: string;
 
-    constructor(hatGarten: boolean, hatKompost: boolean) {
+    constructor(hatGarten: boolean, hatKompost: boolean, weiteres: string) {
         this.hatGarten = hatGarten;
         this.hatKompost = hatKompost;
+        this.weiteres = weiteres;
     }
 }
 
 export class MobilityEval {
     hatEBikes: boolean;
     hatEAutos: boolean;
+    mobVerhaltenS: string;
+    mobVerhaltenL: string;
+    abmachungen: string;
+    regelFlugreisen: string;
+    regelReisen: string;
+    weiteres: string;
 
-    constructor(hatEBikes: boolean, hatEAutos: boolean) {
+    constructor(hatEBikes: boolean, hatEAutos: boolean, mobVerhaltenS: string, mobVerhaltenL: string, abmachungen: string, regelFlugreisen: string, regelReisen: string, weiteres: string) {
         this.hatEBikes = hatEBikes;
         this.hatEAutos = hatEAutos;
+        this.mobVerhaltenS = mobVerhaltenS;
+        this.mobVerhaltenL = mobVerhaltenL;
+        this.abmachungen = abmachungen;
+        this.regelFlugreisen = regelFlugreisen;
+        this.regelReisen = regelReisen;
+        this.weiteres = weiteres;
     }
 }
 

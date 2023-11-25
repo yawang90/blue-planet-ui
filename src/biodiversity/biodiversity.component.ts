@@ -1,21 +1,23 @@
 import {Component} from '@angular/core';
-import {FloatLabelType} from '@angular/material/form-field';
-import {FormBuilder, FormControl} from '@angular/forms';
+import {BiodiversityEval, SchoolService} from "../service/school-service.service";
 
 @Component({
   selector: 'biodiversity',
   templateUrl: './biodiversity.component.html',
 })
 export class BiodiversityComponent {
-  hideRequiredControl = new FormControl(false);
-  floatLabelControl = new FormControl('auto' as FloatLabelType);
-  options = this._formBuilder.group({
-    hideRequired: this.hideRequiredControl,
-    floatLabel: this.floatLabelControl,
-  });
+  hatGarten: boolean;
+  hatKompost: boolean;
+  weiteres: string;
 
-  constructor(private _formBuilder: FormBuilder) {}
-  getFloatLabelValue(): FloatLabelType {
-    return this.floatLabelControl.value || 'auto';
+  constructor(private schoolService: SchoolService) {
+    this.hatGarten = false;
+    this.hatKompost = false;
+    this.weiteres = "";
+  }
+
+  saveBiodiversity(){
+    this.schoolService.addBiodiversity(new BiodiversityEval(this.hatGarten, this.hatKompost, this.weiteres))
+    window.location.href='./overview';
   }
 }
