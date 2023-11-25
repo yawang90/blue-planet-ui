@@ -1,5 +1,6 @@
 import {Component} from '@angular/core';
 import {MobilityEval, SchoolService} from "../service/school-service.service";
+import {Router} from "@angular/router";
 
 @Component({
   selector: 'mobility',
@@ -15,7 +16,7 @@ export class MobilityComponent {
   regelReisen: string;
   weiteres: string;
 
-  constructor(private schoolService: SchoolService) {
+  constructor(private schoolService: SchoolService, private router: Router) {
     this.hatEBikes = false;
     this.hatEAutos = false;
     this.mobVerhaltenS = "";
@@ -26,8 +27,9 @@ export class MobilityComponent {
     this.weiteres = "";
   }
 
-  saveMobility() {
-    this.schoolService.addMobility(new MobilityEval(this.hatEBikes, this.hatEAutos, this.mobVerhaltenS, this.mobVerhaltenL, this.abmachungen, this.regelFlugreisen, this.regelReisen, this.weiteres))
-    window.location.href = './overview';
+  onSubmit() {
+    const mobilityEval = new MobilityEval(this.hatEBikes, this.hatEAutos, this.mobVerhaltenS, this.mobVerhaltenL, this.abmachungen, this.regelFlugreisen, this.regelReisen, this.weiteres);
+    this.schoolService.addMobility(mobilityEval);
+    this.router.navigate(['/overview']);
   }
 }

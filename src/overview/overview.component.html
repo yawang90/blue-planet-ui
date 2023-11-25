@@ -38,6 +38,37 @@
             <mat-list-item role="listitem">{{'Energieverbrauch: ' + this.schoolservice.getEnergie()?.energieVerbrauchSek}}</mat-list-item>
           </mat-list>
         </mat-expansion-panel>
+
+        <mat-expansion-panel>
+          <mat-expansion-panel-header>
+            <mat-panel-title>
+              {{'Biodiversität'}}
+            </mat-panel-title>
+          </mat-expansion-panel-header>
+          <mat-list role="list">
+            <mat-list-item role="listitem">{{'Garten: ' + this.schoolservice.getBiodiversity()?.hatGarten}}</mat-list-item>
+            <mat-list-item role="listitem">{{'Kompostiermöglichkeit: ' + this.schoolservice.getBiodiversity()?.hatKompost}}</mat-list-item>
+            <mat-list-item role="listitem">{{'Weiteres: ' + this.schoolservice.getBiodiversity()?.weiteres}}</mat-list-item>
+          </mat-list>
+        </mat-expansion-panel>
+
+        <mat-expansion-panel>
+          <mat-expansion-panel-header>
+            <mat-panel-title>
+              {{'Mobilität'}}
+            </mat-panel-title>
+          </mat-expansion-panel-header>
+          <mat-list role="list">
+            <mat-list-item role="listitem">{{'E-Bikes: ' + this.schoolservice.getMobility()?.hatEBikes}}</mat-list-item>
+            <mat-list-item role="listitem">{{'E-Autos: ' + this.schoolservice.getMobility()?.hatEAutos}}</mat-list-item>
+            <mat-list-item role="listitem">{{'Geschätztes Mobilverhalten der Schüler/innen: ' + this.schoolservice.getMobility()?.mobVerhaltenS}}</mat-list-item>
+            <mat-list-item role="listitem">{{'Geschätztes Mobilverhalten der Lehrpersonen: ' + this.schoolservice.getMobility()?.mobVerhaltenL}}</mat-list-item>
+            <mat-list-item role="listitem">{{'Besondere Abmachungen: ' + this.schoolservice.getMobility()?.abmachungen}}</mat-list-item>
+            <mat-list-item role="listitem">{{'Reglement für Flugreisen: ' + this.schoolservice.getMobility()?.regelFlugreisen}}</mat-list-item>
+            <mat-list-item role="listitem">{{'Reglemente für andere Reisen: ' + this.schoolservice.getMobility()?.regelReisen}}</mat-list-item>
+            <mat-list-item role="listitem">{{'Weiteres: ' + this.schoolservice.getMobility()?.weiteres}}</mat-list-item>
+          </mat-list>
+        </mat-expansion-panel>
       </mat-accordion>
       <br><br>
       <button mat-raised-button color="primary" (click)="openRanking()">Ranking</button>
