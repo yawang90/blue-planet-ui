@@ -16,6 +16,7 @@ import {routes} from "./app.routes";
 import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
 import {MatCheckboxModule} from "@angular/material/checkbox";
 import {OverviewComponent} from "../overview/overview.component";
+import {KlimaschuleComponent} from "../common/klimaschule.component";
 
 /* the AppModule class with the @NgModule decorator */
 @NgModule({
@@ -23,7 +24,8 @@ import {OverviewComponent} from "../overview/overview.component";
     AppComponent,
     BiodiversityComponent,
     EnergieComponent,
-    OverviewComponent
+    OverviewComponent,
+    KlimaschuleComponent
   ],
   imports: [
     RouterModule.forRoot(routes),
