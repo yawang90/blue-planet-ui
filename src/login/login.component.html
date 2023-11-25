@@ -5,17 +5,17 @@
         <h1>{{ 'Login' }}</h1>
         <mat-form-field style="width: 100%;">
           <mat-label>Benutzername</mat-label>
-          <input matInput  value="test">
+          <input matInput name="username" [(ngModel)]="username">
         </mat-form-field>
         <mat-form-field style="width: 100%;">
           <mat-label>Enter your password</mat-label>
-          <input matInput [type]="hide ? 'password' : 'text'">
+          <input matInput name="password" [(ngModel)]="password" [type]="hide ? 'password' : 'text'">
           <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
             <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
           </button>
         </mat-form-field>
         <br>
-        <button mat-raised-button color="primary">Login</button>
+        <button mat-raised-button color="primary" (click)="onLogin()">Login</button>
       </form>
       <br>
     </div>
