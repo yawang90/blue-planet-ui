@@ -16,6 +16,7 @@ import {routes} from "./app.routes";
 import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
 import {MatCheckboxModule} from "@angular/material/checkbox";
 import {OverviewComponent} from "../overview/overview.component";
+import {KlimaschuleComponent} from "../common/klimaschule.component";
 import {LoginComponent} from "../login/login.component";
 import {MobilityComponent} from "../mobility/mobility.component";
 import {MatButtonModule} from "@angular/material/button";
@@ -29,13 +30,15 @@ import {MatIconModule} from "@angular/material/icon";
     EnergieComponent,
     OverviewComponent,
     LoginComponent,
-    MobilityComponent
+    MobilityComponent,
+    KlimaschuleComponent
   ],
   imports: [
     RouterModule.forRoot(routes),
     BrowserModule, BrowserAnimationsModule,
     CommonModule, MatGridListModule,
-    FormsModule, MatCardModule, MatInputModule, ReactiveFormsModule, MatListModule, MatSelectModule, RouterOutlet, MatCheckboxModule, MatButtonModule, MatIconModule
+    FormsModule, MatCardModule, MatInputModule, ReactiveFormsModule, MatListModule,
+    MatSelectModule, RouterOutlet, MatCheckboxModule, MatButtonModule, MatIconModule
   ],
   providers: [],
   bootstrap: [AppComponent]
