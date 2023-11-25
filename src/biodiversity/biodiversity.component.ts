@@ -1,19 +1,9 @@
-import { Component } from '@angular/core';
-import { CommonModule } from '@angular/common';
-import {MatCardModule} from "@angular/material/card";
-import {MatCheckboxModule} from '@angular/material/checkbox';
-import {MatInputModule} from '@angular/material/input';
-import {FloatLabelType, MatFormFieldModule} from '@angular/material/form-field';
-import {FormBuilder, FormControl, FormsModule, ReactiveFormsModule} from '@angular/forms';
-import {MatRadioModule} from "@angular/material/radio";
-import {MatSelectModule} from "@angular/material/select";
-import {MatIconModule} from "@angular/material/icon";
-
+import {Component} from '@angular/core';
+import {FloatLabelType} from '@angular/material/form-field';
+import {FormBuilder, FormControl} from '@angular/forms';
 
 @Component({
   selector: 'biodiversity',
-  standalone: true,
-  imports: [CommonModule, MatFormFieldModule, FormsModule, MatCardModule, MatInputModule, ReactiveFormsModule, MatCheckboxModule, MatRadioModule, MatSelectModule, MatIconModule],
   templateUrl: './biodiversity.component.html',
 })
 export class BiodiversityComponent {
@@ -29,5 +19,3 @@ export class BiodiversityComponent {
     return this.floatLabelControl.value || 'auto';
   }
 }
-
-
