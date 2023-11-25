@@ -31,7 +31,7 @@
             <mat-select>
               <mat-option>{{'-'}}</mat-option>
               <p *ngFor="let enum of HeizartenEnum | keyvalue">
-                <mat-option (click)="setValue(enum.value)" [value]="enum.key">{{enum.value}}</mat-option>
+                <mat-option (click)="setValueSek(enum.value)" [value]="enum.key">{{enum.value}}</mat-option>
               </p>
             </mat-select>
           </mat-form-field>
@@ -53,7 +53,6 @@
         <mat-card-header>
           <mat-card-title>{{'Solaranlage'}}</mat-card-title>
         </mat-card-header>
-        <mat-card-content> {{'aaaaa'}}</mat-card-content>
       </mat-card>
       <mat-card>
         <mat-card-header>
@@ -65,6 +64,9 @@
           <mat-card-title>{{'Weiteres'}}</mat-card-title>
         </mat-card-header>
       </mat-card>
+      <br>
+      <br>
+      <button mat-raised-button color="primary" (click)="onSubmit()">Speichern</button>
     </div>
     <div class="divider" role="separator" aria-label="Divider"></div>
     <div class="right-side">
