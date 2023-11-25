@@ -1,5 +1,4 @@
 import {Injectable} from "@angular/core";
-import {FormControl} from "@angular/forms";
 
 @Injectable({
     providedIn: 'root'
@@ -7,6 +6,7 @@ import {FormControl} from "@angular/forms";
 export class SchoolService {
     biodiversity: BiodiversityEval | undefined;
     energie: EnergieEval | undefined;
+    mobility: MobilityEval | undefined;
 
     /* . . . */
 
@@ -33,6 +33,18 @@ export class SchoolService {
     clearEnergie() {
         this.energie = undefined;
     }
+
+    addMobility(mobilityEval: MobilityEval) {
+        this.mobility = mobilityEval;
+    }
+
+    getMobility() {
+        return this.mobility
+    }
+
+    clearMobility() {
+        this.mobility = undefined;
+    }
 }
 
 export class BiodiversityEval {
@@ -42,6 +54,16 @@ export class BiodiversityEval {
     constructor(hatGarten: boolean, hatKompost: boolean) {
         this.hatGarten = hatGarten;
         this.hatKompost = hatKompost;
+    }
+}
+
+export class MobilityEval {
+    hatEBikes: boolean;
+    hatEAutos: boolean;
+
+    constructor(hatEBikes: boolean, hatEAutos: boolean) {
+        this.hatEBikes = hatEBikes;
+        this.hatEAutos = hatEAutos;
     }
 }
 
