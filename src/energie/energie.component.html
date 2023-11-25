@@ -31,7 +31,7 @@
             <mat-select>
               <mat-option>{{'-'}}</mat-option>
               <p *ngFor="let enum of HeizartenEnum | keyvalue">
-                <mat-option (click)="setValue(enum.value)" [value]="enum.key">{{enum.value}}</mat-option>
+                <mat-option (click)="setValueSek(enum.value)" [value]="enum.key">{{enum.value}}</mat-option>
               </p>
             </mat-select>
           </mat-form-field>
