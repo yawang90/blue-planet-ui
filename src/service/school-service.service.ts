@@ -64,6 +64,10 @@ export class SchoolService {
     getSchulname() {
         return this.schulename;
     }
+
+    getJahr() {
+        return this.referenzjahr;
+    }
 }
 
 export class BiodiversityEval {

@@ -6,6 +6,7 @@ import {LoginComponent} from "../login/login.component";
 import {MobilityComponent} from "../mobility/mobility.component";
 import {SchulinfoComponent} from "../schulinfo/schulinfo.component";
 import {RankingComponent} from "../ranking/ranking.component";
+import {PotentialComponent} from "../potential/potential.component";
 
 export const routes: Routes = [
   { path: '',   redirectTo: '/login', pathMatch: 'full' },
@@ -15,5 +16,6 @@ export const routes: Routes = [
   { path: 'login', component: LoginComponent },
   { path: 'schulinfo', component: SchulinfoComponent },
   { path: 'mobility', component: MobilityComponent },
-  { path: 'ranking', component: RankingComponent }
+  { path: 'ranking', component: RankingComponent },
+  { path: 'potential', component: PotentialComponent }
 ];

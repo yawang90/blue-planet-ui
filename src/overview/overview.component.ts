@@ -1,6 +1,6 @@
 import {Component, ViewChild} from '@angular/core';
 import {Router} from '@angular/router';
-import {SchoolService} from "../service/school-service.service";
+import {HeizartenEnum, SchoolService} from "../service/school-service.service";
 import {MatAccordion} from "@angular/material/expansion";
 import {LoginService} from "../login/login.service";
 
@@ -28,5 +28,20 @@ export class OverviewComponent {
 
     openRanking() {
       this.router.navigate(['/', 'ranking']);
+    }
+
+    openPotential() {
+        this.router.navigate(['/', 'potential']);
+    }
+
+    translate(flag: boolean | undefined) {
+        if (flag === undefined || flag === null) {
+            return '-';
+        }
+        return flag ? 'vorhanden' : 'kein';
+    }
+
+    translateNull(heizart: HeizartenEnum | null | undefined) {
+        return heizart ? heizart : '';
     }
 }
