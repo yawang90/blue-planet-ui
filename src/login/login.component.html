@@ -10,9 +10,7 @@
         <mat-form-field style="width: 100%;">
           <mat-label>Enter your password</mat-label>
           <input matInput name="password" [(ngModel)]="password" [type]="hide ? 'password' : 'text'">
-          <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
-            <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
-          </button>
+          <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide"></button>
         </mat-form-field>
         <br>
         <button mat-raised-button color="primary" (click)="onLogin()">Login</button>
@@ -21,6 +19,7 @@
     </div>
     <div class="divider" role="separator" aria-label="Divider"></div>
     <div class="right-side">
+      <klimaschule></klimaschule>
     </div>
   </div>
 </main>

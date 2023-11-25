@@ -4,12 +4,14 @@ import {BiodiversityComponent} from "../biodiversity/biodiversity.component";
 import {OverviewComponent} from "../overview/overview.component";
 import {LoginComponent} from "../login/login.component";
 import {MobilityComponent} from "../mobility/mobility.component";
+import {SchulinfoComponent} from "../schulinfo/schulinfo.component";
 
 export const routes: Routes = [
-  { path: '',   redirectTo: '/overview', pathMatch: 'full' },
+  { path: '',   redirectTo: '/login', pathMatch: 'full' },
   { path: 'overview', component: OverviewComponent },
   { path: 'energie', component: EnergieComponent },
   { path: 'biodiversity', component: BiodiversityComponent },
   { path: 'login', component: LoginComponent },
+  { path: 'schulinfo', component: SchulinfoComponent },
   { path: 'mobility', component: MobilityComponent }
 ];

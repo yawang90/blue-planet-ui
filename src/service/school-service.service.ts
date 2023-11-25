@@ -4,11 +4,14 @@ import {Injectable} from "@angular/core";
     providedIn: 'root'
 })
 export class SchoolService {
+    schulename: string | null = '';
+    schuleadresse: string | null = '';
     biodiversity: BiodiversityEval | undefined;
     energie: EnergieEval | undefined;
     mobility: MobilityEval | undefined;
 
     /* . . . */
+    referenzjahr: number | null = 0;
 
     addBiodiversity(biodiversity: BiodiversityEval) {
         this.biodiversity = biodiversity;
@@ -44,6 +47,22 @@ export class SchoolService {
 
     clearMobility() {
         this.mobility = undefined;
+    }
+
+    addSchulename(value: string | null) {
+        this.schulename = value;
+    }
+
+    addSchuladresse(value: string | null) {
+        this.schuleadresse = value;
+    }
+
+    addJahr(value: number | null) {
+      this.referenzjahr = value;
+    }
+
+    getSchulname() {
+        return this.schulename;
     }
 }
 

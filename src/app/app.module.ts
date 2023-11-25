@@ -18,30 +18,33 @@ import {MatCheckboxModule} from "@angular/material/checkbox";
 import {OverviewComponent} from "../overview/overview.component";
 import {KlimaschuleComponent} from "../common/klimaschule.component";
 import {LoginComponent} from "../login/login.component";
-import {MobilityComponent} from "../mobility/mobility.component";
 import {MatButtonModule} from "@angular/material/button";
 import {MatIconModule} from "@angular/material/icon";
+import {MobilityComponent} from "../mobility/mobility.component";
+import {SchulinfoComponent} from "../schulinfo/schulinfo.component";
+import {MatExpansionModule} from "@angular/material/expansion";
 
 /* the AppModule class with the @NgModule decorator */
 @NgModule({
-  declarations: [
-    AppComponent,
-    BiodiversityComponent,
-    EnergieComponent,
-    OverviewComponent,
-    LoginComponent,
-    MobilityComponent,
-    KlimaschuleComponent
-  ],
-  imports: [
-    RouterModule.forRoot(routes),
-    BrowserModule, BrowserAnimationsModule,
-    CommonModule, MatGridListModule,
-    FormsModule, MatCardModule, MatInputModule, ReactiveFormsModule, MatListModule,
-    MatSelectModule, RouterOutlet, MatCheckboxModule, MatButtonModule, MatIconModule
-  ],
-  providers: [],
-  bootstrap: [AppComponent]
+    declarations: [
+        AppComponent,
+        BiodiversityComponent,
+        EnergieComponent,
+        OverviewComponent,
+        LoginComponent,
+        MobilityComponent,
+        SchulinfoComponent,
+        KlimaschuleComponent
+    ],
+    imports: [
+        RouterModule.forRoot(routes),
+        BrowserModule, BrowserAnimationsModule,
+        CommonModule, MatGridListModule,
+        FormsModule, MatCardModule, MatInputModule, ReactiveFormsModule, MatListModule,
+        MatSelectModule, RouterOutlet, MatCheckboxModule, MatButtonModule, MatIconModule, MatExpansionModule
+    ],
+    providers: [],
+    bootstrap: [AppComponent]
 })
 export class AppModule {
 }
